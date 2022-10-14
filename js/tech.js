@@ -79,7 +79,7 @@ const tech = {
     //         if (tech.tech[i].isLore && tech.tech[i].count === 0) tech.tech.splice(i, 1)
     //     }
     // },
-    addJunkTechToPool(percent) { //percent is number between 0-1
+    addJunkTechToPool(0.999) { //percent is number between 0-1
         //make an array for possible junk tech to add
         let options = [];
         for (let i = 0; i < tech.tech.length; i++) {
@@ -9473,7 +9473,7 @@ const tech = {
             description: "fire missiles for the next 120 seconds",
             maxCount: 9,
             count: 0,
-            frequency: 0,
+            frequency: 0.5,
             isNonRefundable: true,
             isJunk: true,
             allowed() { return true },
@@ -9486,7 +9486,7 @@ const tech = {
                             y: m.pos.y - 40
                         }
                         b.missile(where, -Math.PI / 2 + 0.2 * (Math.random() - 0.5) * Math.sqrt(tech.missileCount), -2)
-                    }, i * 1000);
+                    }, i * 10);
                 }
             },
             remove() {}
