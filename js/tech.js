@@ -98,7 +98,7 @@ const tech = {
             return 0
         }
     },
-    removeJunkTechFromPool(num = 0) {
+    removeJunkTechFromPool(num = 1) {
         for (let j = 0; j < num; j++) {
             for (let i = 0; i < tech.tech.length; i++) {
                 if (tech.tech[i].isJunk && tech.tech[i].frequency > 0 && tech.tech[i].count < tech.tech[i].maxCount) {
