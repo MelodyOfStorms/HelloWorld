@@ -5,6 +5,11 @@ const spawn = {
     randomBossList: [
         "laserTargetingBoss"
     ],
+    //randomBossList: [
+        //"orbitalBoss", "historyBoss", "shooterBoss", "cellBossCulture", "bomberBoss", "spiderBoss", "launcherBoss", "laserTargetingBoss",
+        //"powerUpBoss", "powerUpBossBaby", "streamBoss", "pulsarBoss", "spawnerBossCulture", "grenadierBoss", "growBossCulture", "blinkBoss",
+        //"snakeSpitBoss", "laserBombingBoss", "blockBoss", "revolutionBoss", "slashBoss", "shieldingBoss",
+        //"timeSkipBoss", "dragonFlyBoss", "beetleBoss"
     bossTypeSpawnOrder: [], //preset list of boss names calculated at the start of a run by the randomSeed
     bossTypeSpawnIndex: 0, //increases as the boss type cycles
     randomLevelBoss(x, y, options = []) {
@@ -18,11 +23,24 @@ const spawn = {
     },
     pickList: ["starter", "starter"],
     fullPickList: [
-        "spinner"
+        //"flutter", "flutter", "flutter",
+        //"hopper", "hopper", "hopper",
+        //"slasher", "slasher", "slasher",
+        //"stabber", "stabber", "stabber",
+        //"springer", "springer", "springer",
+        //"shooter", "shooter",
+        //"grenadier", "grenadier",
+        //"striker", "striker",
+        //"laser", "laser",
+        //"pulsar", "pulsar",
+        //"launcher", "launcherOne", "exploder", "sneaker", "sucker", "sniper", "spinner", "grower", "beamer", "spawner", "ghoster",
+        //, "focuser"
+        "laserTargetingBoss"
     ],
     mobTypeSpawnOrder: [], //preset list of mob names calculated at the start of a run by the randomSeed
     mobTypeSpawnIndex: 0, //increases as the mob type cycles
     allowedGroupList: ["spinner"],
+    //allowedGroupList: ["spinner", "striker", "springer", "laser", "focuser", "beamer", "exploder", "spawner", "shooter", "launcher", "launcherOne", "stabber", "sniper", "pulsar", "grenadier", "slasher", "flutter"],
     setSpawnList() { //this is run at the start of each new level to determine the possible mobs for the level
         spawn.pickList.splice(0, 1);
         const push = spawn.mobTypeSpawnOrder[spawn.mobTypeSpawnIndex++ % spawn.mobTypeSpawnOrder.length]
