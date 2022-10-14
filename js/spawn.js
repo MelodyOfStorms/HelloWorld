@@ -3,10 +3,7 @@ const spawn = {
     nonCollideBossList: ["cellBossCulture", "bomberBoss", "powerUpBoss", "growBossCulture"],
     // other bosses: suckerBoss, laserBoss, tetherBoss, bounceBoss, sprayBoss, mineBoss, hopMomBoss    //these need a particular level to work so they are not included in the random pool
     randomBossList: [
-        "orbitalBoss", "historyBoss", "shooterBoss", "cellBossCulture", "bomberBoss", "spiderBoss", "launcherBoss", "laserTargetingBoss",
-        "powerUpBoss", "powerUpBossBaby", "streamBoss", "pulsarBoss", "spawnerBossCulture", "grenadierBoss", "growBossCulture", "blinkBoss",
-        "snakeSpitBoss", "laserBombingBoss", "blockBoss", "revolutionBoss", "slashBoss", "shieldingBoss",
-        "timeSkipBoss", "dragonFlyBoss", "beetleBoss"
+        "laserTargetingBoss"
     ],
     bossTypeSpawnOrder: [], //preset list of boss names calculated at the start of a run by the randomSeed
     bossTypeSpawnIndex: 0, //increases as the boss type cycles
@@ -21,18 +18,7 @@ const spawn = {
     },
     pickList: ["starter", "starter"],
     fullPickList: [
-        "flutter", "flutter", "flutter",
-        "hopper", "hopper", "hopper",
-        "slasher", "slasher", "slasher",
-        "stabber", "stabber", "stabber",
-        "springer", "springer", "springer",
-        "shooter", "shooter",
-        "grenadier", "grenadier",
-        "striker", "striker",
-        "laser", "laser",
-        "pulsar", "pulsar",
-        "launcher", "launcherOne", "exploder", "sneaker", "sucker", "sniper", "spinner", "grower", "beamer", "spawner", "ghoster",
-        //, "focuser"
+        "focuser"
     ],
     mobTypeSpawnOrder: [], //preset list of mob names calculated at the start of a run by the randomSeed
     mobTypeSpawnIndex: 0, //increases as the mob type cycles
