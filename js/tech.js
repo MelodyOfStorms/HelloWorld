@@ -79,7 +79,7 @@ const tech = {
     //         if (tech.tech[i].isLore && tech.tech[i].count === 0) tech.tech.splice(i, 1)
     //     }
     // },
-    addJunkTechToPool(0.999) { //percent is number between 0-1
+    addJunkTechToPool(percent) { //percent is number between 0-1
         //make an array for possible junk tech to add
         let options = [];
         for (let i = 0; i < tech.tech.length; i++) {
@@ -98,7 +98,7 @@ const tech = {
             return 0
         }
     },
-    removeJunkTechFromPool(num = 1) {
+    removeJunkTechFromPool(num = 0) {
         for (let j = 0; j < num; j++) {
             for (let i = 0; i < tech.tech.length; i++) {
                 if (tech.tech[i].isJunk && tech.tech[i].frequency > 0 && tech.tech[i].count < tech.tech[i].maxCount) {
